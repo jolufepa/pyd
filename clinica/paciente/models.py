@@ -6,7 +6,7 @@ class modelPaciente(models.Model):
 	apellido_paterno = models.CharField('apellido_paterno', max_length=50)
 	apellido_materno = models.CharField('apellido_materno', max_length=50)
 	dni = models.CharField('dni', max_length=50)
-	fecha_nacimiento = models.DateField('fecha de nacimiento')
+	fecha_nacimiento = models.DateField('fecha de nacimiento',blank=True, null=True)
 	direccion = models.CharField('direccion', max_length=50)
 	telefono_fijo = models.IntegerField(blank=True, null=True)
 	telefono_movil = models.IntegerField()

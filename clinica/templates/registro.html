@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+	<form action="" method="POST" accept-charset="utf-8">{%csrf_token%}
+	{{el_form.as_p}}
+	
+	<input type="submit" name="" value="Registrar">
+</form>
+</div>
+
+	
+{% endblock content %}
