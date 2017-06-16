@@ -1,6 +1,8 @@
 from django.db import models
-
+from django.utils.six import with_metaclass
 # Create your models here.
+
+
 class modelPaciente(models.Model):
 	nombre = models.CharField('nombre', max_length=50)
 	apellido_paterno = models.CharField('apellido_paterno', max_length=50)
@@ -15,3 +17,4 @@ class modelPaciente(models.Model):
 
 	def __str__(self):
 		return self.dni
+

@@ -17,3 +17,9 @@ class formPaciente(forms.Form):
 		if qs.exists():
 			raise forms.ValidationError("Error el dni ya existe")
 		return form_dni	
+	def clean_email(self):
+		form_email = self.cleaned_data['email']
+		qs = modelPaciente.objects.filter(email=form_email)
+		if qs.exists():
+			raise forms.ValidationError("El email ya existe")
+		return form_email		
