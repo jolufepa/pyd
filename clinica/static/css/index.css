@@ -1,0 +1,8 @@
+.fondo {
+    background: url('../img/fondoIndex.jpg');
+    height: 100vh;
+}
+
+.container {
+    margin-top: 158px;
+}

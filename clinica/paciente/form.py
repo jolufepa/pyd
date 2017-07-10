@@ -13,7 +13,8 @@ class formPaciente(forms.Form):
 
 	def clean_dni(self):
 		form_dni =  self.cleaned_data['dni']
-		qs = modelPaciente.objects.filter(dni=form_dni)
+		form_dni1 = form_dni.upper()
+		qs = modelPaciente.objects.filter(dni=form_dni1)
 		if qs.exists():
 			raise forms.ValidationError("Error el dni ya existe")
 		return form_dni	

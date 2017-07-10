@@ -23,8 +23,8 @@ def registro(request):
 		abc6 = form_data.get('telefono_fijo')
 		abc7 = form_data.get('telefono_movil')
 		abc8 = form_data.get('email')
-		obj = modelPaciente.objects.create(nombre=abc, apellido_paterno=abc1, apellido_materno=abc2, 
-			dni=abc3, fecha_nacimiento=abc4, direccion=abc5, telefono_fijo=abc6, telefono_movil=abc7, email=abc8)
+		obj = modelPaciente.objects.create(nombre=abc.title(), apellido_paterno=abc1.title(), apellido_materno=abc2.title(), 
+			dni=abc3.upper(), fecha_nacimiento=abc4, direccion=abc5, telefono_fijo=abc6, telefono_movil=abc7, email=abc8.lower())
 
 		return HttpResponseRedirect("/registro?")
 	context = {
